@@ -33,3 +33,19 @@ npm run dist
 
 - 视频“精确到刚好 20MB”受编码器与素材复杂度影响，会有小幅偏差。
 - 若源文件已经很小或质量很高，继续压缩会出现可见损失，这是编码本身限制。
+
+## GitHub Actions 自动打包
+
+仓库已提供 workflow：`.github/workflows/build-desktop.yml`
+
+触发方式：
+
+- push 到 `main/master`
+- Pull Request
+- 手动触发（workflow_dispatch）
+- 发布 Release（会自动上传安装包到 Release Assets）
+
+产物：
+
+- macOS: `dist/*.dmg`
+- Windows: `dist/*.exe`
