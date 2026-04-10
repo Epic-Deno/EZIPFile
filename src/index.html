@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EZIPFile 压缩工具</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>EZIPFile</h1>
+      <p>在本地压缩图片/视频到指定体积（如输入 20 即目标约 20MB）。</p>
+
+      <div class="field-row">
+        <input id="filePath" type="text" placeholder="请选择文件" readonly />
+        <button id="pickBtn">选择文件</button>
+      </div>
+
+      <label for="targetSize">目标大小（MB）</label>
+      <input id="targetSize" type="number" min="1" step="1" value="20" />
+
+      <button id="compressBtn" class="primary">开始压缩</button>
+
+      <div id="status" class="status">等待操作...</div>
+    </main>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
